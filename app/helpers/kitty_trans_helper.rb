@@ -1,0 +1,2 @@
+module KittyTransHelper
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pid:</strong>
+  <%= @kitty_tran.pID %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @kitty_tran.amount %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @kitty_tran.credit %>
+</p>
+
+<p>
+  <strong>Mid:</strong>
+  <%= @kitty_tran.mID %>
+</p>
+
+<%= link_to 'Edit', edit_kitty_tran_path(@kitty_tran) %> |
+<%= link_to 'Back', kitty_trans_path %>

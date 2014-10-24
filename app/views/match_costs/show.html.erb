@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cost code:</strong>
+  <%= @match_cost.cost_code %>
+</p>
+
+<p>
+  <strong>Mid:</strong>
+  <%= @match_cost.mID %>
+</p>
+
+<%= link_to 'Edit', edit_match_cost_path(@match_cost) %> |
+<%= link_to 'Back', match_costs_path %>

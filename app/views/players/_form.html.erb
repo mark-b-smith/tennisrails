@@ -1,0 +1,45 @@
+<%= form_for(@player) do |f| %>
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first %><br>
+    <%= f.text_field :first %>
+  </div>
+  <div class="field">
+    <%= f.label :last %><br>
+    <%= f.text_field :last %>
+  </div>
+  <div class="field">
+    <%= f.label :full_charge %><br>
+    <%= f.check_box :full_charge %>
+  </div>
+  <div class="field">
+    <%= f.label :play_singles %><br>
+    <%= f.check_box :play_singles %>
+  </div>
+  <div class="field">
+    <%= f.label :pref9 %><br>
+    <%= f.check_box :pref9 %>
+  </div>
+  <div class="field">
+    <%= f.label :only9 %><br>
+    <%= f.check_box :only9 %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

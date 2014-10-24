@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first: MyString
+  last: MyString
+  full_charge: false
+  play_singles: false
+  pref9: false
+  only9: false
+  active: false
+
+two:
+  first: MyString
+  last: MyString
+  full_charge: false
+  play_singles: false
+  pref9: false
+  only9: false
+  active: false

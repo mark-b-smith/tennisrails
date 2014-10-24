@@ -1,0 +1,47 @@
+<h2>Welcome to Monday Night Tennis</h2>
+
+<br>
+
+<h1>Listing players</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Full charge</th>
+      <th>Play singles</th>
+      <th>Pref9</th>
+      <th>Only9</th>
+      <th>Active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.first %></td>
+        <td><%= player.last %></td>
+        <td><%= player.full_charge %></td>
+        <td><%= player.play_singles %></td>
+        <td><%= player.pref9 %></td>
+        <td><%= player.only9 %></td>
+        <td><%= player.active %></td>
+        <td><%= link_to 'Show', player %></td>
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player', new_player_path %>
+
+<br>
+
+<h3>Who will play tonight?</h3>

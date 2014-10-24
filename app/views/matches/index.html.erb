@@ -1,0 +1,41 @@
+<h1>Listing matches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>T11</th>
+      <th>T12</th>
+      <th>T1s</th>
+      <th>T21</th>
+      <th>T22</th>
+      <th>T2s</th>
+      <th>Match date</th>
+      <th>Doubles</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matches.each do |match| %>
+      <tr>
+        <td><%= match.t11 %></td>
+        <td><%= match.t12 %></td>
+        <td><%= match.t1s %></td>
+        <td><%= match.t21 %></td>
+        <td><%= match.t22 %></td>
+        <td><%= match.t2s %></td>
+        <td><%= match.match_date %></td>
+        <td><%= match.doubles %></td>
+        <td><%= link_to 'Show', match %></td>
+        <td><%= link_to 'Edit', edit_match_path(match) %></td>
+        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Match', new_match_path %>

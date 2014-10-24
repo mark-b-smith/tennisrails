@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @cost.cost %>
+</p>
+
+<p>
+  <strong>Asof:</strong>
+  <%= @cost.asOf %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @cost.active %>
+</p>
+
+<%= link_to 'Edit', edit_cost_path(@cost) %> |
+<%= link_to 'Back', costs_path %>

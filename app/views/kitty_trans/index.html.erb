@@ -1,0 +1,33 @@
+<h1>Listing kitty_trans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pid</th>
+      <th>Amount</th>
+      <th>Credit</th>
+      <th>Mid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kitty_trans.each do |kitty_tran| %>
+      <tr>
+        <td><%= kitty_tran.pID %></td>
+        <td><%= kitty_tran.amount %></td>
+        <td><%= kitty_tran.credit %></td>
+        <td><%= kitty_tran.mID %></td>
+        <td><%= link_to 'Show', kitty_tran %></td>
+        <td><%= link_to 'Edit', edit_kitty_tran_path(kitty_tran) %></td>
+        <td><%= link_to 'Destroy', kitty_tran, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kitty tran', new_kitty_tran_path %>

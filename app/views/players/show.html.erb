@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @player.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @player.last %>
+</p>
+
+<p>
+  <strong>Full charge:</strong>
+  <%= @player.full_charge %>
+</p>
+
+<p>
+  <strong>Play singles:</strong>
+  <%= @player.play_singles %>
+</p>
+
+<p>
+  <strong>Pref9:</strong>
+  <%= @player.pref9 %>
+</p>
+
+<p>
+  <strong>Only9:</strong>
+  <%= @player.only9 %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @player.active %>
+</p>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

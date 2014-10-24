@@ -1,0 +1,33 @@
+<%= form_for(@kitty_tran) do |f| %>
+  <% if @kitty_tran.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kitty_tran.errors.count, "error") %> prohibited this kitty_tran from being saved:</h2>
+
+      <ul>
+      <% @kitty_tran.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pID %><br>
+    <%= f.number_field :pID %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :credit %><br>
+    <%= f.check_box :credit %>
+  </div>
+  <div class="field">
+    <%= f.label :mID %><br>
+    <%= f.number_field :mID %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
